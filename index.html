@@ -149,19 +149,55 @@
 
   <div class="contenedor-boletos">
 
-    <article class="boleto">
-      <h3>🔥 Acceso General</h3>
-      <p class="precio">$3,500 MXN</p>
-      <p>
-        Disfruta de una experiencia
-        gastronómica única.
-      </p>
-      <h4>Beneficios incluidos</h4>
-      <p>Próximamente conocerás todos los beneficios.</p>
-      <button type="button" disabled>
-        Próximamente
-      </button>
-    </article>
+  
+<article class="boleto">
+
+  <h3>🔥 Acceso General</h3>
+
+  <p class="precio">$3,500 MXN</p>
+
+  <p>
+    Disfruta de una experiencia
+    gastronómica única.
+  </p>
+
+  <h4>Beneficios incluidos</h4>
+
+  <p>
+    Próximamente conocerás todos los beneficios.
+  </p>
+
+  <!-- Selector de boletos -->
+
+  <div class="selector-boletos">
+
+    <label for="cantidad-general">
+      Cantidad de boletos:
+    </label>
+
+    <input
+      type="number"
+      id="cantidad-general"
+      min="1"
+      max="10"
+      value="1"
+    >
+
+    <p>
+      Total:
+      <strong id="total-general">
+        $3,500 MXN
+      </strong>
+    </p>
+
+  </div>
+
+  <button type="button" disabled>
+    Próximamente
+  </button>
+
+</article>
+
 
     <article class="boleto">
       <h3>🥩 Acceso Prémium</h3>
