@@ -14,17 +14,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    background-color: #17110e;
-    color: #777777;
+    background-color: #777777;
+    color: #f5e6d3;
     font-family: Georgia, serif;
     text-align: center;
     margin: 0;
     padding: 80px 20px;
     min-height: 100vh;
     box-sizing: border-box;
-}
-
-}
 
 h1 {
     color: #e99a45;
