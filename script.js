@@ -14,3 +14,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+const cantidadGeneral = document.getElementById("cantidad-general");
+const totalGeneral = document.getElementById("total-general");
+
+const precioGeneral = 3500;
+
+if (cantidadGeneral && totalGeneral) {
+
+    cantidadGeneral.addEventListener("input", function () {
+
+        let cantidad = Number(cantidadGeneral.value);
+
+        if (!Number.isInteger(cantidad) || cantidad < 1 || cantidad > 10) {
+            totalGeneral.textContent = "Selecciona de 1 a 10 boletos";
+            return;
+        }
+
+        let total = cantidad * precioGeneral;
+
+        totalGeneral.textContent = total.toLocaleString("es-MX", {
+            style: "currency",
+            currency: "MXN",
+            maximumFractionDigits: 0
+        });
+
+    });
+
+}
