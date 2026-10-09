@@ -59,7 +59,7 @@ h3 { font-size: 1.45rem; }
 /* NAVEGACIÓN */
 
 .topbar {
-  height: 86px;
+  min-height: 86px;
   position: sticky;
   top: 0;
   z-index: 30;
@@ -717,7 +717,7 @@ nav a:hover, nav a.active { color: var(--gold); }
 
 .mini-card h3 { color: var(--gold); }
 
-/* RESPONSIVE */
+/* ADAPTACIÓN A DISPOSITIVOS */
 
 @media (max-width: 1120px) {
   nav { gap: 11px; }
@@ -726,7 +726,7 @@ nav a:hover, nav a.active { color: var(--gold); }
 }
 
 @media (max-width: 850px) {
-  .topbar { height: 75px; }
+  .topbar { min-height: 75px; }
   .menu-toggle { display: block; }
 
   nav {
@@ -771,3 +771,4 @@ nav a:hover, nav a.active { color: var(--gold); }
   .brand { font-size: .78rem; }
   .brand-icon { font-size: 2rem; }
 }
+
