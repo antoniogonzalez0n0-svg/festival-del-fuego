@@ -1,302 +1,104 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival del Fuego | El Sabor de la Brasa</title>
-<link rel="stylesheet" href="estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#140e0b">
+  <meta name="description" content="Festival del Fuego: El Sabor de la Brasa. Gastronomía, música y experiencias en Huasca de Ocampo, Hidalgo.">
+  <title>Festival del Fuego | El Sabor de la Brasa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-    <header>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#festival">El festival</a>
-    <a href="#experiencias">Experiencias</a>
-    <a href="#gastronomia">Gastronomía</a>
-    <a href="#boletos">Boletos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
-    
-    <h1>🔥 Festival del Fuego 🔥</h1>
-    <h2>El Sabor de la Brasa</h2>
+  <div id="sparks" aria-hidden="true"></div>
 
-    <p>Bienvenidos a una experiencia gastronómica única.</p>
-    <p>📍 Huasca de Ocampo, Hidalgo, México.</p>
+  <header class="topbar">
 
-    <button>Descubre el festival</button>
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <span class="brand-icon">✦</span>
+      <span>
+        FESTIVAL <b>DEL FUEGO</b>
+        <small>EL SABOR DE LA BRASA</small>
+      </span>
+    </a>
 
-    
-<section id="festival">
-    <h2>Conoce el Festival del Fuego</h2>
+    <button
+      id="menuToggle"
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >☰</button>
 
-    <p>
-        Festival del Fuego: El Sabor de la Brasa
-        es una experiencia gastronómica que
-        celebra la cocina al fuego, las parrillas
-        y los sabores tradicionales de México.
-    </p>
+    <nav id="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#festival">El festival</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#gastronomia">Gastronomía</a>
+      <a href="#boletos">Boletos</a>
+      <a href="#monedero">Monedero</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
 
-    <p>
-        En Huasca de Ocampo, Hidalgo,
-        reuniremos gastronomía, entretenimiento
-        y experiencias para crear un evento
-        inolvidable.
-    </p>
+    <a class="btn btn-small btn-primary nav-cta" href="#boletos">
+      EXPLORAR ACCESOS <span>↗</span>
+    </a>
 
-    <h3>¿Qué encontrarás?</h3>
+  </header>
 
-    <ul>
-        <li>Experiencias gastronómicas.</li>
-        <li>Especialistas en cocina a la brasa.</li>
-        <li>Actividades y entretenimiento.</li>
-        <li>Zonas de descanso y convivencia.</li>
-        <li>Alimentos incluidos según tu boleto.</li>
-    </ul>
-</section>
+  <main id="app" tabindex="-1"></main>
 
-    
-<section id="experiencias">
+  <footer class="footer">
 
-    <h2>Experiencias del Festival</h2>
+    <div class="footer-main">
 
-    <p>
-        Descubre una celebración donde el fuego,
-        la gastronomía y el entretenimiento
-        se convierten en una experiencia única.
-    </p>
+      <div>
+        <span class="eyebrow">
+          UNA EXPERIENCIA QUE DEJA HUELLA
+        </span>
 
-    <h3>🔥 Experiencia a la Brasa</h3>
-    <p>
-        Disfruta de preparaciones al fuego,
-        cortes de carne y técnicas de parrilla
-        realizadas por especialistas.
-    </p>
+        <h2>
+          EL FUEGO NOS<br>
+          <em>REÚNE.</em>
+        </h2>
+      </div>
 
-    <h3> Cocina en Vivo</h3>
-    <p>
-        Observa demostraciones gastronómicas
-        y conoce los secretos de la cocina
-        tradicional y contemporánea.
-    </p>
+      <div>
+        <p>Festival del Fuego · El Sabor de la Brasa</p>
+        <p>Huasca de Ocampo, Hidalgo, México</p>
+        <p>
+          Proyecto demostrativo · Precios y disponibilidad
+          sujetos a confirmación
+        </p>
+      </div>
 
-    <h3> Música y Entretenimiento</h3>
-    <p>
-        Disfruta de presentaciones musicales
-        y actividades durante el festival.
-    </p>
+    </div>
 
-    <h3> Naturaleza y Convivencia</h3>
-    <p>
-        Comparte momentos especiales en
-        un entorno natural de Huasca de Ocampo,
-        Hidalgo.
-    </p>
+    <div class="footer-bottom">
+      <span>
+        © <span id="year"></span> Festival del Fuego
+      </span>
+      <span>
+        HECHO PARA LOS QUE VIVEN CON PASIÓN 🔥
+      </span>
+    </div>
 
-</section>
+  </footer>
 
-    
-<section id="gastronomia">
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite"
+  ></div>
 
-  <h2>Gastronomía a la Brasa</h2>
+  <script src="script.js"></script>
 
-  <p>
-    Descubre una experiencia gastronómica
-    donde el fuego es el protagonista.
-    Sabores auténticos, técnicas de cocina
-    y preparaciones especiales.
-  </p>
-
-  <h3> Nuestra propuesta gastronómica</h3>
-  <p>
-    Conoce las diferentes propuestas culinarias
-    que formarán parte del Festival del Fuego.
-  </p>
-
-  <h3> Gastronomía incluida en tu boleto</h3>
-  <p>
-    Consulta los alimentos y experiencias
-    gastronómicas incluidos en cada tipo
-    de acceso.
-  </p>
-
-  <h3>Gastronomía adicional</h3>
-  <p>
-    Explora las opciones gastronómicas
-    disponibles para adquirir durante
-    el evento.
-  </p>
-
-  <h3> Monedero digital</h3>
-  <p>
-    Conoce nuestro sistema de pagos
-    para realizar compras dentro del festival.
-  </p>
-
-</section>
-
-    
-<section id="boletos">
-
-  <h2>🎟️ Boletos y Accesos</h2>
-
-  <p>
-    Elige cómo quieres vivir el
-    Festival del Fuego: El Sabor de la Brasa.
-  </p>
-
-  <div class="contenedor-boletos">
-
-  
-<article class="boleto">
-
-  <h3>🔥 Acceso General</h3>
-
-  <p class="precio">$3,500 MXN</p>
-
-  <p>
-    Disfruta de una experiencia
-    gastronómica única.
-  </p>
-
-  <h4>Beneficios incluidos</h4>
-
-  <p>
-    Próximamente conocerás todos los beneficios.
-  </p>
-
-  <!-- Selector de boletos -->
-
-  <div class="selector-boletos">
-
-    <label for="cantidad-general">
-      Cantidad de boletos:
-    </label>
-
-    <input
-      type="number"
-      id="cantidad-general"
-      min="1"
-      max="10"
-      value="1"
-    >
-
-    <p>
-      Total:
-      <strong id="total-general">
-        $3,500 MXN
-      </strong>
-    </p>
-
-  </div>
-
-  <button type="button" disabled>
-    Próximamente
-  </button>
-
-</article>
-
-
-    <article class="boleto">
-      <h3>🥩 Acceso Prémium</h3>
-      <p class="precio">Precio por definir</p>
-      <p>
-        Una experiencia con beneficios
-        gastronómicos adicionales.
-      </p>
-      <h4>Beneficios incluidos</h4>
-      <p>Próximamente conocerás todos los beneficios.</p>
-      <button type="button" disabled>
-        Próximamente
-      </button>
-    </article>
-
-    <article class="boleto">
-      <h3>👑 Experiencia VIP</h3>
-      <p class="precio">Precio por definir</p>
-      <p>
-        Una propuesta exclusiva para
-        disfrutar el festival.
-      </p>
-      <h4>Beneficios incluidos</h4>
-      <p>Próximamente conocerás todos los beneficios.</p>
-      <button type="button" disabled>
-        Próximamente
-      </button>
-    </article>
-
-  </div>
-
-  <p>
-    La venta de boletos todavía no está habilitada.
-    Los beneficios y precios definitivos
-    se anunciarán próximamente.
-  </p>
-
-</section>
-
-    
-<section id="contacto">
-
-  <h2>📩 Contáctanos</h2>
-
-  <p>
-    ¿Tienes alguna pregunta sobre el
-    Festival del Fuego: El Sabor de la Brasa?
-    Nos encantará escucharte.
-  </p>
-
-  <form id="formulario-contacto">
-
-    <label for="nombre">Nombre completo</label>
-    <input
-      type="text"
-      id="nombre"
-      name="nombre"
-      placeholder="Escribe tu nombre"
-      required
-    >
-
-    <label for="correo">Correo electrónico</label>
-    <input
-      type="email"
-      id="correo"
-      name="correo"
-      placeholder="ejemplo@correo.com"
-      required
-    >
-
-    <label for="asunto">Asunto</label>
-    <select id="asunto" name="asunto" required>
-      <option value="">Selecciona un asunto</option>
-      <option value="boletos">Boletos</option>
-      <option value="gastronomia">Gastronomía</option>
-      <option value="experiencias">Experiencias</option>
-      <option value="otros">Otros</option>
-    </select>
-
-    <label for="mensaje">Mensaje</label>
-    <textarea
-      id="mensaje"
-      name="mensaje"
-      rows="5"
-      placeholder="Escribe tu mensaje"
-      required
-    ></textarea>
-
-    <button type="submit" disabled>
-      Envío próximamente
-    </button>
-
-  </form>
-
-</section>
-
-
-<script src="script.js"></script>
-
-    
 </body>
 </html>
